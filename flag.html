@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamic Flags</title>
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	
+</head>
+<body>
+
+		
+	<div class="colortemp">
+		<a href="#" class="close text-light" id="close"></a>
+		<div class="author text-center">
+				<img src="images/author.jpg" width="50%;" style="border-radius: 100%;">
+				<h5 class="text-light">Khokon Chandra</h5>
+			</div>
+		<form name="myform" id="myform" onsubmit="multiCheck(); return false;">
+			
+	        <p class="text-light p-1 bg-success">Select your favorite Colors:</p>
+	        <label><input type="checkbox" value="#fff" name="color"> White <div class="colorbox bg-light"></div></label>
+	        <label><input type="checkbox" value="#72AF2D" name="color"> Green <div class="colorbox bg-success"></div></label>
+	        <label><input type="checkbox" value="#3F6ECA" name="color"> Blue <div class="colorbox bg-primary"></div></label>
+	        <label><input type="checkbox" value="#87919D" name="color"> Gray <div class="colorbox bg-secondary"></div></label>
+	        <label><input type="checkbox" value="#FFD42A" name="color"> Yellow <div class="colorbox bg-warning"></div></label>
+	        <label><input type="checkbox" value="#FF3B19" name="color"> Red <div class="colorbox bg-danger"></div></label>
+	        <label><input type="checkbox" value="Orange" name="color"> Orange <div class="colorbox" style="background: orange;"></div></label>
+	        <br>
+	        <p class="text-center"><input type="submit" id="btn1" value="with repeatation" onclick="flagFunction(1)" class="btn btn-primary"><p>
+	      
+	        <p class="text-center"><input type="submit" id="btn2" value="Without Repeatation" onclick="flagFunction(2)" class="btn btn-info "></p>
+	        <p class="text-center"><input type="reset" id="btn3" value="Reset" onclick="resetFunc()" class="btn btn-success "></p>
+        </form>
+    </div>
+
+
+<div class="mainContainer">
+	
+	<div class="p-2 head text-light" style="width: 100%;position: fixed; font-size:3vw;">
+		<a href="#" class="bar p-3" id="bar"><span class="fa fa-bars"></span></a>
+		Selected Color:<span id="item" class="pr-4">0</span> Posibolities : <span id="totalFlag" class="pl-1">None</span></div>
+	<div id="flags" width="100%">
+		
+	</div>
+</div>
+
+<script src="js/flag.js"></script>
+</body>
+</html>
